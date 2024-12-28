@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <meta name="description" content="POS - Bootstrap Admin Template">
     <meta name="keywords"
-        content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern,  html5, responsive">
+        content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
     <meta name="author" content="Dreamguys - Bootstrap Admin Template">
     <meta name="robots" content="noindex, nofollow">
     <title>Dreams Pos admin template</title>
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="assets/css/animate.css">
+
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
 
     <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
 
@@ -279,106 +281,133 @@
                 </div>
             </div>
         </div>
-
-        <!--add new item-->
         <div class="page-wrapper">
             <div class="content">
                 <div class="page-header">
                     <div class="page-title">
-                        <h4>Item Add</h4>
-                        <h6>Create new item</h6>
+                        <h4>Group Permissions</h4>
+                        <h6>Manage Group Permissions</h6>
+                    </div>
+                    <div class="page-btn">
+                        <a class="btn btn-added" href="createpermission.html"><img src="assets/img/icons/plus.svg"
+                                alt="img" class="me-1">Add Group Permission</a>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Item Name</label>
-                                    <input type="text">
+                        <div class="table-top">
+                            <div class="search-set">
+                                <div class="search-input">
+                                    <a class="btn btn-searchset"><img src="assets/img/icons/search-white.svg"
+                                            alt="img"></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Category</label>
-                                    <input type="text">
-                                </div>
+                            <div class="wordset">
+                                <ul>
+                                    <li>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="pdf"><img
+                                                src="assets/img/icons/pdf.svg" alt="img"></a>
+                                    </li>
+                                    <li>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="excel"><img
+                                                src="assets/img/icons/excel.svg" alt="img"></a>
+                                    </li>
+                                    <li>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="print"><img
+                                                src="assets/img/icons/printer.svg" alt="img"></a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Sub Category</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Brand</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Unit</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>SKU</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Minimum Qty</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Quantity</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label>Description</label>
-                                    <textarea class="form-control"></textarea>
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Price</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label> Item Image</label>
-                                    <div class="image-upload">
-                                        <input type="file">
-                                        <div class="image-uploads">
-                                            <img src="assets/img/icons/upload.svg" alt="img">
-                                            <h4>Drag and drop a file to upload</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <a href="javascript:void(0);" class="btn btn-submit me-2">Submit</a>
-                                <a href="productlist.html" class="btn btn-cancel">Cancel</a>
-                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table  datanew">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </th>
+                                        <th>Role</th>
+                                        <th>description</th>
+                                        <th>Status</th>
+                                        <th class="text-end">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </td>
+                                        <td>Admin</td>
+                                        <td>Owner</td>
+                                        <td>
+                                            <span class="badges bg-lightgreen">Active</span>
+                                        </td>
+                                        <td class="text-end">
+                                            <a class="me-3" href="editpermission.html">
+                                                <img src="assets/img/icons/edit.svg" alt="img">
+                                            </a>
+                                            <a class="me-3 confirm-text" href="javascript:void(0);">
+                                                <img src="assets/img/icons/delete.svg" alt="img">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </td>
+                                        <td>Purchase</td>
+                                        <td>Purchase Permission</td>
+                                        <td>
+                                            <span class="badges bg-lightgreen">Active</span>
+                                        </td>
+                                        <td class="text-end">
+                                            <a class="me-3" href="editpermission.html">
+                                                <img src="assets/img/icons/edit.svg" alt="img">
+                                            </a>
+                                            <a class="me-3 confirm-text" href="javascript:void(0);">
+                                                <img src="assets/img/icons/delete.svg" alt="img">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </td>
+                                        <td>Sales</td>
+                                        <td>Sales Permission</td>
+                                        <td>
+                                            <span class="badges bg-lightgreen">Active</span>
+                                        </td>
+                                        <td class="text-end">
+                                            <a class="me-3" href="editpermission.html">
+                                                <img src="assets/img/icons/edit.svg" alt="img">
+                                            </a>
+                                            <a class="me-3 confirm-text" href="javascript:void(0);">
+                                                <img src="assets/img/icons/delete.svg" alt="img">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
 
             </div>
         </div>
-
     </div>
 
 
